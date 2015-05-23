@@ -1,0 +1,45 @@
+
+<ng-include src="'partials/loginheader.html'" ></ng-include>
+
+
+  <div class="row">
+  	<div class="col-md-12 col-xs-12"id="startView" style="background:#48cfae; width:100%;">
+  		<div class="row">
+  			<center>
+  				<div id="page-header" style="margin: 10% 0 10% 0;">
+ 					<font style="color:#f8f8f8;margin: 0 0 0 0;"><h1>My Bookshelf</h1></font>
+				</div>
+			</center>
+		</div>
+  	</div>
+  </div>
+
+  <div class="row">
+  	<div class="col-md-12 col-xs-12">
+  		<div class="row">
+    		<div id="libraryContent" class="jumbotron" style="padding:1% 0 1% 0;margin:0 0 0 0;">
+      			<div class="row">
+          			<center>
+          				<div class="userLibrary" style="margin: 10% 0 0 0;">
+								<div class="booksRow" ng-repeat="row in chunks">
+				 				<div class="searchedBook" ng-repeat="book in row"> 
+								<img class="bookThumbnail" style="position:relative" ng-src="{{book.volumeInfo.imageLinks.smallThumbnail}}"></img> 
+								<div class="bookInfo" style="position: relaive">
+								<center><h5> {{book.volumeInfo.title}}   </br></h5>
+								<a class="btn btn-warning"  ng-click="tradeBooks(book.volumeInfo)">Trade book</a>
+								<a class="btn btn-default"  ng-click="removeBook(book.volumeInfo)"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a></center>
+								{{hej}}
+								</div>
+							</div>
+          				</div>
+          			</center>
+          			<center>
+          				<a href="#/search"><button class="btn btn-default" type="button" style="margin: 0 0 10% 0;">Add More Books!</button></a>
+          			</center>
+      			</div>
+    		</div> 
+		</div>
+    </div> 
+  </div> 
+	
+	

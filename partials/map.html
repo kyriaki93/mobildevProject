@@ -1,0 +1,53 @@
+
+<div class="row"  style="background:#48cfae;">
+  <div class="col-md-12 col-xs-12" >		
+    <div class="row">
+			<map zoom="8" center="59.32932349999999, 18.068580800000063">	
+      <!--	markers for the tradable books-->
+        <div ng-repeat="point in tradingPoints">
+          	<marker animation="DROP" 
+          			icon="{{imageTrade}}" 
+          			title="{{point.Title}}"
+          			position="{{point.Address}}" 
+          			id="7"   >
+          	</marker>  		
+  			</div>
+          <!--  markers for the users postition-->
+          <marker animation="DROP" 
+                title="Min position"
+                position="{{currentLa}}, {{currentLo}}" 
+                 >
+          </marker> 
+          <!--  marker for the search result-->
+            <marker animation="DROP" 
+                title="{{place.formatted_address}}"
+                position="{{place.formatted_address}}" 
+                icon="{{image}}"
+                 >
+          </marker> 
+      </map>
+
+	</div>
+</div>
+  <div class="col-md-4 col-xs-1">
+  </div>
+  <div class="col-md-4 col-xs-10" >    
+    <div class="row">
+      <!-- search field for user -->
+      <input
+        style="margin: 5% 0 5% 0;"
+        class="form-control" 
+        places-auto-complete size=80 
+        ng-model="address" 
+        types="{{types}}"
+        placeholder="Search for a library"
+        on-place-changed="placeChanged(place)"
+      />
+  </div>
+</div>
+</div>
+
+
+    
+
+

@@ -1,0 +1,108 @@
+#cartcontent {
+	margin: 0;
+	background-color: #3dd0b0;
+	width: 100%;
+	height: 850px;
+
+}
+#cartcontent p {
+	text-align: center;
+	color: #fff;
+	padding-top: 15px;
+	font-size: 25px;
+}
+#book {
+	background-color: #FFF;
+	width: 100%;
+	height: 700px;
+	text-align: center;
+
+}
+#bookimg {
+	padding-top: 10px;
+	text-align: center;
+	padding-left: 0px;
+}
+#booktext {
+	height: 380px;
+	width: 100%;
+	padding-top: 0px;
+	text-align: center;
+	padding-left: 0px;
+}
+#booktext p {
+	color:#333;
+	font-size: 12px;
+}
+#wrap {
+	margin-right: 15px;
+	margin-left: 15px;
+	margin-bottom: 10px;
+	padding-top: 10px;
+}
+#knapp {
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	margin-top: 15px;
+
+}
+/* Selector */
+
+
+/* CSS for Search - START */ 
+
+.input-group {
+	padding-left: 5px;
+	padding-top: 20px;
+}
+#search {
+	float:left; 
+	background-color: #3dd0b0;
+	height:400px;
+	width: 100%;
+	border-style: solid;
+	border-color: #ffffff;
+	border-width:thin;
+	border-top: none;
+	border-bottom:none;
+	overflow: scroll;
+	}
+
+.booksRow{
+	height:350px;
+	position:relative;
+	left:10px;
+
+}
+
+.searchedBook{
+	height:320px;
+	width: 200px;
+}
+
+.bookInfo{
+	height:80px;
+	width: 150px;
+	z-index:-1px;
+	position:relative;
+}
+
+
+.bookThumbnail{
+	height:200px;
+	width: 150px;
+	position:relative;
+	
+}
+
+.msgAdd{
+	
+	background-color: #F0F0F0;
+	height:100px;
+	width: 18%;
+	position:fixed;
+	top:52px;
+	z-index:1px;
+	padding:10px;
+}

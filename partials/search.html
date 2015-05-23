@@ -1,0 +1,55 @@
+
+   
+<!-- På denna sida ska användaren kunna söka efter böcker, även se topplista, kategorier osv. -->
+
+<ng-include src="'partials/loginheader.html'" ng-controller="headerCtrl"></ng-include>
+
+<!-- search -->
+<div class="row" style="position:relative;">
+
+<!-- SearchBar -->
+<div class='row' >
+  <div id="searchBar" class="col-md-12" style="background:#48cfae; width:100%; height:100%;">
+		<div class="col-md-4">
+		</div>
+		<div class="col-md-4">
+			<div class="input-group" style="padding:10% 0 10% 0;">
+            	<input ng-model="searchString" id="inputSearch" type="text" class="form-control" placeholder="Search and add your favorite books to your bookshelf!">
+            	<span class="input-group-btn">
+            	<div class="searchButton">
+					<button ng-click="search(searchString)" id="searchWord" class="btn btn-default" type="button" style="submit"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button></div>
+            	</span></p>
+			</div>
+		</div>
+	</div>
+</div>
+			
+<!-- SearchResults -->
+<div class="row">
+	<center>
+	<div class="col-md-12">
+		<div class="jumbotron">
+			<table style="border-spacing: 5px;">
+				<tr class="booksRow" ng-repeat="rows in chunks">
+				 	<td class="searchedBook" ng-repeat="book in rows"> 
+						<img class="bookThumbnail" style="margin-left: auto;margin-right: auto" ng-src="{{book.volumeInfo.imageLinks.smallThumbnail}}"></img> 
+						<div class="bookInfo">
+						<center><h5> {{book.volumeInfo.title.substring(0, 17)}}... </br></h5>
+						 <a class="btn btn-warning"  ng-click="addBookToLibrary(book.volumeInfo.industryIdentifiers); showAlert(book.volumeInfo.title)" ng-class="{ active: message }"><span class="glyphicon glyphicon-heart" aria-hidden="true"></span></a></center>
+						</div>
+						
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	</center>
+</div>
+			
+</div>
+</div>
+   
+
+
+
+

@@ -1,0 +1,23 @@
+ <ng-include src="'partials/loginheader.html'"></ng-include>
+
+  <div class="row" style="background-color:#f8f8f8; height: 100%;">
+    <div class="col-md-4 col-xs-1">
+    </div>
+      <div class="col-md-4 col-xs-10">
+        <div class="row">
+          <center>
+          <p style="margin-top:5%" ng-model="online">Users active in chat: {{online}}</p>
+                <div id="output" style="margin-top:10px;margin-bottom:50px;"></div>
+                <div class="row">
+                  <div class="input-group" style="position:fixed;bottom:25px;width:300px;">
+
+                     <input type="text" class="form-control" placeholder="Enter chat here" id="input">
+                       <span class="input-group-btn">
+                          <button id="buttonSend" class="btn btn-default" type="button">Send</button>   
+                      </span>
+                  </div>
+                </div>
+      </center>
+      </div>
+    </div>
+  </div> 
